@@ -1,4 +1,4 @@
-# **Facade design pattern**
+# **Façade design pattern**
 
 One-Stop Shop for Complexity
 
