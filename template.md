@@ -6,9 +6,11 @@
 
 ## Review
 
+1. `<review-item>`
+
 ## Benefits
 
-* 
+* `<benefits-item>`
 
 ## Example
 
@@ -17,3 +19,5 @@
 ```
 
 ## Remember
+
+* `<remember-item>`
