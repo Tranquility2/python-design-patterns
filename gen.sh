@@ -16,8 +16,8 @@ while read line; do
         file="${line:3}"
         # convert to lowercase and replace spaces with underscores and add suffix
         file=$(echo "$file" | tr '[:upper:]' '[:lower:]' | tr ' ' '_' | sed 's/$/.md/')
-        # create the file
-        touch "$file"
+        # create the file from the template
+        cp ../template.md "$file"
         # write link to file in markdown file
         echo "- [${line:3}]($dir/$file)" >> ../README.md
     fi
