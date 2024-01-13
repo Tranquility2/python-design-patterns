@@ -1,6 +1,12 @@
 #!/bin/bash
 # Generate markdown files from a list.txt file
 
+read -p "Are you sure you want to generate the markdown files? [y/N] " -n 1 -r
+printf "\nGenerating markdown files...\n"
+
+# make sure docs directory exists
+mkdir -p docs
+
 # Read the file list.txt line by line
 while read line; do
     # if line starts with a [D] create a directory and move into it
