@@ -1,10 +1,12 @@
 #!/bin/bash
+# Generate markdown files from a list.txt file
 
 # Read the file list.txt line by line
 while read line; do
     # if line starts with a [D] create a directory and move into it
     if [[ $line = \[D\]* ]]; then
         dir="${line:3}"
+        # convert to lowercase and replace spaces with underscores
         dir=$(echo "$dir" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')
         mkdir -p "$dir"
         cd "$dir"
@@ -24,3 +26,6 @@ while read line; do
     # if line is empty, move up a directory
     [[ -z $line ]] && cd ..
 done < list.txt
+
+# copy all generated markdown files (without README.md) to the docs directory
+find . -name "*.md" ! -name "README.md" -exec cp {} docs/ \;
