@@ -1,6 +1,6 @@
 # SOLID Design Principles
 
-- [Single Responsibility Principle]()
+- [Single Responsibility Principle](solid_design_principles/single_responsibility_principle.md)
 - [Open Closed Principle](solid_design_principles/open_closed_principle.md)
 - [Liskov Substitution Principle](solid_design_principles/liskov_substitution_principle.md)
 - [Interface Segregation Principle](solid_design_principles/interface_segregation_principle.md)
