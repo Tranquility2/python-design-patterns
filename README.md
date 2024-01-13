@@ -1,3 +1,5 @@
+Checkout the [Web](https://tranquility2.github.io/python-design-patterns/) version :)
+
 # SOLID Design Principles
 
 - [Single Responsibility Principle](docs/solid_design_principles/single_responsibility_principle.md)
