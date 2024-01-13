@@ -1,8 +1,10 @@
-# **Factory design pattern**
+# **Factory Design Pattern**
 
 Personal Object Assembly Line
 
-> In a nutshell, the Factory design pattern acts as your personal object assembly line, adapting to your needs and delivering the objects you need, right when you need them.
+> In a nutshell, the Factory Design Pattern acts as your personal object assembly line, adapting to your needs and delivering the objects you need, right when you need them.
+
+---
 
 ## Review
 
@@ -10,6 +12,8 @@ Personal Object Assembly Line
 2. Factory delegation: The factory analyzes your request and chooses the appropriate concrete creator based on specifications.
 3. Concrete creator builds: The chosen craftsperson utilizes their skills and tools to build the object according to your specs.
 4. Product delivery: The factory then presents you with the final, completed object.
+
+---
 
 ## Benefits
 
@@ -23,6 +27,8 @@ Personal Object Assembly Line
   Extend functionality by adding new concrete creators without changing existing code.
 * **Code reusability**
   Share common functionalities among creators for efficient development.
+
+---
 
 ## Example
 
@@ -56,6 +62,8 @@ client.use()  # Output: Using Product 1
 client = Factory.create_product("2")
 client.use()  # Output: Using Product 2
 ```
+
+---
 
 ## Remember
 

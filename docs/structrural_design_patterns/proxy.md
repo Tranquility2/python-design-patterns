@@ -1,8 +1,10 @@
-# **Proxy design pattern**
+# **Proxy Design Pattern**
 
 Bridge to Control and Flexibility
 
-> In a nutshell, the proxy design pattern acts as a versatile bridge between clients and real objects, offering control, flexibility, and enhanced functionality in your software architecture.
+> In a nutshell, the proxy Design Pattern acts as a versatile bridge between clients and real objects, offering control, flexibility, and enhanced functionality in your software architecture.
+
+---
 
 ## Flow
 
@@ -10,6 +12,8 @@ Bridge to Control and Flexibility
 2. The proxy receives the client's request, performs any necessary pre-processing or access control, and forwards it to the real object.
 3. The real object fulfills the request and sends the response back to the proxy.
 4. The proxy processes the response (if needed) and delivers it to the client.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ Bridge to Control and Flexibility
   Sensitive operations can be hidden from direct client access.
 * **Increased flexibility**
   You can easily change the real object behind the proxy without affecting the client.
+
+---
 
 ## Example
 
@@ -47,6 +53,8 @@ proxy.request()  # Output:
 # RealSubject: Handling request.
 # Proxy: Post-processing request.
 ```
+
+---
 
 ## Remember
 

@@ -1,24 +1,22 @@
-# **---**
-
-# **`<name>` design pattern**
+# **`<name>` Design Pattern**
 
 `<one-liner>`
 
 > `<overview>`
 
-## ---
+---
 
 ## Review
 
 1. `<review-item>`
 
-## ---
+---
 
 ## Benefits
 
 * `<benefits-item>`
 
-## ---
+---
 
 ## Example
 
@@ -26,7 +24,7 @@
 # Example
 ```
 
-## ---
+---
 
 ## Remember
 

@@ -1,8 +1,10 @@
-# **Observer design pattern**
+# **Observer Design Pattern**
 
 Watchful Eyes, Timely Updates, A Symphony of Awareness
 
-> In essence, the Observer design pattern transforms your code into a buzzing newsroom, where objects stay tuned for the latest updates, reacting with agility and awareness to any changes in their surroundings. This promotes decoupled communication, efficient updates, and a dynamic ecosystem of informed objects.
+> In essence, the Observer Design Pattern transforms your code into a buzzing newsroom, where objects stay tuned for the latest updates, reacting with agility and awareness to any changes in their surroundings. This promotes decoupled communication, efficient updates, and a dynamic ecosystem of informed objects.
+
+---
 
 ## Workflow
 
@@ -11,6 +13,8 @@ Watchful Eyes, Timely Updates, A Symphony of Awareness
 3. The "subject" object maintains a list of registered observers. It's the "news source" that triggers notifications when its state changes.
 4. When the subject's state changes, it notifies all registered observers. This is the "press release" moment, delivering updates to interested parties.
 5. Observers receive the notification and can react accordingly. They update their own state or perform actions based on the received information.
+
+---
 
 ## Benefits
 
@@ -22,6 +26,8 @@ Watchful Eyes, Timely Updates, A Symphony of Awareness
   Instead of manually checking for updates, observers rely on the subject's notifications.
 * **Efficient communication**
   Updates are sent only to interested parties, minimizing unnecessary processing.
+
+---
 
 ## Example
 
@@ -75,6 +81,8 @@ class ReaderNotification(Observer):
         print(f"Reader notification: New post by '{subject.author}': '{subject.title}'")
 
 ```
+
+---
 
 ## Remember
 

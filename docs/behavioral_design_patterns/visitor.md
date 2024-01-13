@@ -1,8 +1,10 @@
-# **Visitor design pattern**
+# **Visitor Design Pattern**
 
 Unleashing Flexibility Without Modifying Existing Structures
 
-> In essence, the Visitor design pattern lets you unleash a variety of analyses and operations on your existing structures without getting your hands dirty. The elements work together without modifying each other, promoting clean, flexible, and adaptable code.
+> In essence, the Visitor Design Pattern lets you unleash a variety of analyses and operations on your existing structures without getting your hands dirty. The elements work together without modifying each other, promoting clean, flexible, and adaptable code.
+
+---
 
 ## Workflow
 
@@ -10,6 +12,8 @@ Unleashing Flexibility Without Modifying Existing Structures
 2. Each element implements an "accept" method. This method takes a visitor as an argument and allows the visitor to perform its specific operation on the element.
 3. Concrete visitor classes implement the visitor interface. Each class implements the methods defined in the interface, customizing the operation for different purposes.
 4. Clients create and use specific visitor objects. They pass the chosen visitor to the elements via the "accept" method, triggering the desired analysis.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ Unleashing Flexibility Without Modifying Existing Structures
   The garden elements are open for extension but closed for modification, promoting code stability.
 * **Reduced code duplication**
   Common operation logic can be centralized in visitor classes, avoiding repetition.
+
+---
 
 ## Example
 
@@ -89,6 +95,8 @@ for element in garden:
 print("Collected scents:", scent_visitor.scents)
 
 ```
+
+---
 
 ## Remember
 

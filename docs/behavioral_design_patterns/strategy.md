@@ -1,8 +1,10 @@
-# **Strategy design pattern**
+# **Strategy Design Pattern**
 
 A Toolbox for Algorithms, Switching on the Fly
 
-> In essence, the Strategy design pattern empowers your program to be like a master chef, wielding a toolbox of algorithms and choosing the right tool for the job, adapting effortlessly to any situation.
+> In essence, the Strategy Design Pattern empowers your program to be like a master chef, wielding a toolbox of algorithms and choosing the right tool for the job, adapting effortlessly to any situation.
+
+---
 
 ## Workflow
 
@@ -10,6 +12,8 @@ A Toolbox for Algorithms, Switching on the Fly
 2. Create concrete strategy classes. Each class implements the interface with its own specific algorithm for handling a particular situation.
 3. The main program has a "context" object. This object holds a reference to the current strategy and delegates the actual operation to the chosen strategy.
 4. The context can change the strategy at runtime. Based on the situation, it can choose and assign a new strategy object, effectively switching the algorithm used.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ A Toolbox for Algorithms, Switching on the Fly
   The core logic is closed for modification but open for extension with new strategies.
 * **Decoupling**
   The context doesn't depend on the specific implementation of the chosen strategy.
+
+---
 
 ## Example
 
@@ -64,6 +70,8 @@ sorted_more_data = context.sort_data(more_data)
 print(sorted_more_data)  # Output: [1, 4, 6, 8, 9]
 
 ```
+
+---
 
 ## Remember
 

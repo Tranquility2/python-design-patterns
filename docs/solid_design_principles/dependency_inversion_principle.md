@@ -4,11 +4,15 @@ Turning Your Code Upside Down for Good
 
 > In essence, the Dependency Inversion Principle encourages you to build your software on a foundation of abstractions, not concrete implementations, giving you a house that's not only strong but also adaptable to future changes.
 
+---
+
 ## How DIP works
 
 1. High-level modules depend on abstractions, not concrete implementations. They rely on interfaces or abstract classes that define the required functionalities.
 2. Low-level modules implement the abstractions. They provide specific implementations that adhere to the defined interfaces and fulfill the required functionalities.
 3. Clients (high-level modules) interact with the abstractions, not the concretions. They use the interfaces or abstract classes to access the desired functionalities without knowing the specific implementations.
+
+---
 
 ## Benefits
 
@@ -20,6 +24,8 @@ Turning Your Code Upside Down for Good
   Mocking and testing abstractions become easier, as you're not tied to specific concrete implementations.
 * **Open-closed principle**
   You can extend functionality by adding new implementations without modifying existing code.
+
+---
 
 ## Remember
 

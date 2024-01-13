@@ -1,14 +1,18 @@
-# **Composite design pattern**
+# **Composite Design Pattern**
 
 Building Things with Building Blocks
 
 > In essence, the composite pattern simplifies building complex structures by treating "parts" and "wholes" similarly, giving you more flexibility and code reuse.
+
+---
 
 ## Ojective
 
 1. Leaves and composites share a common interface: Both expose functionalities to draw, move, etc.
 2. Clients treat everything as shapes: You can draw or move either a leaf or a composite without knowing its internal structure.
 3. Composites act like containers: They manage their children (other shapes) and handle client requests through them.
+
+---
 
 ## Benefits
 
@@ -20,6 +24,8 @@ Building Things with Building Blocks
   Treat all elements consistently, regardless of their complexity.
 * **Code reuse**
   Common operations get implemented once for all types of shapes.
+
+---
 
 ## Example
 
@@ -75,6 +81,8 @@ group2.draw()  # Outputs:
 # Drawing circle named Circle 1
 # Drawing square named Square 1
 ```
+
+---
 
 ## Remember
 

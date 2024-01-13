@@ -1,8 +1,10 @@
-# **Prototype design pattern**
+# **Prototype Design Pattern**
 
 Cloning Your Way to Efficiency
 
-> In essence, the Prototype design pattern empowers you to leverage the success of existing objects, making your creation process faster, more efficient, and more flexible.
+> In essence, the Prototype Design Pattern empowers you to leverage the success of existing objects, making your creation process faster, more efficient, and more flexible.
+
+---
 
 ## Review
 
@@ -10,6 +12,8 @@ Cloning Your Way to Efficiency
 2. Prototype cloning: The pattern creates a duplicate of the chosen prototype, preserving its state.
 3. Customization (optional): You can modify the cloned object's properties to create your own variation.
 4. New object creation: The customized clone becomes the new object, ready for use.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ Cloning Your Way to Efficiency
   Easily create variations based on existing prototypes with minimal code changes.
 * **Simplified complex object creation**
   Avoids the need to manually define intricate object states.
+
+---
 
 ## Example
 
@@ -53,6 +59,8 @@ clone2.field2 = "Modified data for clone 2"
 print(clone1.field1)  # Output: Modified data for clone 1
 print(clone2.field2)  # Output: Modified data for clone 2
 ```
+
+---
 
 ## Remember
 

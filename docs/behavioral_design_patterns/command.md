@@ -1,8 +1,10 @@
-# **Command design pattern**
+# **Command Design Pattern**
 
 Wrapping Actions for Flexible Execution
 
-> In essence, the Command design pattern simplifies your code by wrapping actions in separate objects, offering a flexible and controlled way to trigger and execute functionalities within your software.
+> In essence, the Command Design Pattern simplifies your code by wrapping actions in separate objects, offering a flexible and controlled way to trigger and execute functionalities within your software.
+
+---
 
 ## Workflow
 
@@ -10,6 +12,8 @@ Wrapping Actions for Flexible Execution
 2. Bind the command object to an event or trigger. This could be a button press, menu selection, or any other user interaction.
 3. When the event occurs, the command object is executed. The command retrieves any relevant information and invokes the specific method on the receiver to perform the action.
 4. The receiver reacts to the command and performs the desired action. The command remains decoupled from the receiver's internal implementation.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ Wrapping Actions for Flexible Execution
   Multiple commands can be grouped and executed together as a single unit.
 * **Queuing and logging**
   Commands can be queued for later execution or logged for tracking and auditing.
+
+---
 
 ## Example
 
@@ -59,6 +65,8 @@ invoker.add_command(ConcreteCommand2(receiver))
 invoker.execute_commands()
 
 ```
+
+---
 
 ## Remember
 

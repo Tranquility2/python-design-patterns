@@ -4,11 +4,15 @@ Decoupling Abstraction from Implementation.
 
 > In essence, the bridge pattern decouples abstraction from implementation, promoting flexibility, maintainability, and cleaner code.
 
+---
+
 ## Ojective
 
 * Separate hierarchies: Define one for abstraction (Shape, Triangle, etc.) and another for implementation (RedDrawer, BlueDrawer, etc.).
 * Bridge objects: Each abstraction holds a reference to an implementation object (its "color").
 * Client independence: Clients only interact with the abstraction, unaware of the implementation details.
+
+---
 
 ## Benefits
 
@@ -18,6 +22,8 @@ Decoupling Abstraction from Implementation.
   Add new shapes or colors without messing up existing code.
 * **Improved decoupling**
   Makes code cleaner and easier to maintain.
+
+---
 
 ## Example
 
@@ -60,6 +66,8 @@ blue_square = Square(BlueDrawer())
 red_circle.draw()  # Output: Drawing Circle in red
 blue_square.draw()  # Output: Drawing Square in blue
 ```
+
+---
 
 ## Remember
 

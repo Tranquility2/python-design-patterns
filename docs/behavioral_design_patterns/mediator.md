@@ -1,8 +1,10 @@
-# **Mediator design pattern**
+# **Mediator Design Pattern**
 
 The Orchestrator of Collaboration, Bringing Harmony to the Code
 
-> In essence, the Mediator design pattern transforms your code into a well-rehearsed orchestra, where objects collaborate seamlessly under the guidance of a central conductor. This promotes clarity, flexibility, and control in your program's communication, ensuring a harmonious symphony of functionality.
+> In essence, the Mediator Design Pattern transforms your code into a well-rehearsed orchestra, where objects collaborate seamlessly under the guidance of a central conductor. This promotes clarity, flexibility, and control in your program's communication, ensuring a harmonious symphony of functionality.
+
+---
 
 ## Workflow
 
@@ -10,6 +12,8 @@ The Orchestrator of Collaboration, Bringing Harmony to the Code
 2. Concrete objects implement the mediator interface. They register themselves with the mediator and receive messages through it.
 3. The mediator acts as a central hub. It receives messages from objects, identifies the relevant target objects, and forwards the messages appropriately.
 4. The mediator can also enforce communication rules. It can restrict direct communication between certain objects and ensure proper channels are used.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ The Orchestrator of Collaboration, Bringing Harmony to the Code
   New objects can be easily added and integrated into the communication network through the mediator.
 * **Centralized control**
   The mediator can enforce rules and restrictions on communication, ensuring consistency.
+
+---
 
 ## Example
 
@@ -68,6 +74,8 @@ jane.send_message("Hello John!")
 # Output: John received message from Jane: Hello John!
 
 ```
+
+---
 
 ## Remember
 

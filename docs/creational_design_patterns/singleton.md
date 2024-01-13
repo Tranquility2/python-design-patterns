@@ -1,8 +1,10 @@
-# **Singleton design pattern**
+# **Singleton Design Pattern**
 
 Your One-and-Only Object
 
-> In essence, the Singleton design pattern acts as your city's mayor's office, ensuring centralized control, efficient resource management, and a single point of contact for vital functionalities within your application.
+> In essence, the Singleton Design Pattern acts as your city's mayor's office, ensuring centralized control, efficient resource management, and a single point of contact for vital functionalities within your application.
+
+---
 
 ## Review
 
@@ -10,6 +12,8 @@ Your One-and-Only Object
 2. Global access point: The class provides a publicly accessible method to retrieve the single instance, often called `getInstance()`.
 3. Client interaction: Clients use the `getInstance()` method to access the singleton object and utilize its functionalities.
 4. Controlled state: The singleton object can maintain any necessary state, accessible only through its methods, ensuring consistency throughout the program.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ Your One-and-Only Object
   Eliminates concerns about multiple instances and conflicting state.
 * **Global accessibility**
   Provides convenient access to the single instance from any part of the code.
+
+---
 
 ## Example
 
@@ -45,6 +51,8 @@ print(singleton2.value)  # Output: 10 (same instance)
 print(singleton1 is singleton2)  # Output: True (same object)
 
 ```
+
+---
 
 ## Remember
 

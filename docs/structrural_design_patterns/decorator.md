@@ -1,14 +1,18 @@
-# **Decorator design pattern**
+# **Decorator Design Pattern**
 
 Adding Layers Like an Onion
 
 > In a nutshell, the decorator pattern empowers you to customize existing functionality without modifying its core, adding layers of magic like toppings on your sandwich.
+
+---
 
 ## Review
 
 1. Decorators wrap the base object, inheriting its interface and adding their own functionality.
 2. Clients interact with the decorated object, unaware of the base object or additional layers.
 3. Decorators can chain together, forming a stack of modifications on top of the base object.
+
+---
 
 ## Benefits
 
@@ -20,6 +24,8 @@ Adding Layers Like an Onion
   Extend functionality without modifying existing code.
 * **Code reuse**
   Create reusable decorators for common functionalities.
+
+---
 
 ## Example
 
@@ -41,6 +47,8 @@ say_hello("Tom")  # Output:
 # Hello, Tom!
 # After calling the function
 ```
+
+---
 
 ## Remember
 

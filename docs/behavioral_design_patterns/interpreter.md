@@ -1,8 +1,10 @@
-# **Interpreter design pattern**
+# **Interpreter Design Pattern**
 
 Bridging the Language Gap with Flexible Execution
 
-> In essence, the Interpreter design pattern opens a door to a world of custom languages and flexible execution within your software. It grants your users a unique voice and unlocks specialized functionalities, taking your application beyond the bounds of traditional programming.
+> In essence, the Interpreter Design Pattern opens a door to a world of custom languages and flexible execution within your software. It grants your users a unique voice and unlocks specialized functionalities, taking your application beyond the bounds of traditional programming.
+
+---
 
 ## Workflow
 
@@ -11,6 +13,8 @@ Bridging the Language Gap with Flexible Execution
 3. Concrete expression classes inherit from the abstract classes. These classes implement the `interprete()` method with the logic for evaluating each specific type of expression.
 4. Build a parser for your DSL. This component takes input written in the DSL and converts it into a tree structure of expression objects.
 5. The interpreter walks the expression tree. Starting from the root, it calls the `interprete()` method on each expression object, evaluating the entire instruction step-by-step.
+
+---
 
 ## Benefits
 
@@ -22,6 +26,8 @@ Bridging the Language Gap with Flexible Execution
   New expression types and functionalities can be easily added by extending the grammar and creating new concrete expression classes.
 * **Loose coupling**
   The interpreter decouples the DSL from the execution logic, promoting modularity and reusability.
+
+---
 
 ## Example
 
@@ -62,6 +68,8 @@ result = expression.interpret()
 print(result)  # Output: 8
 
 ```
+
+---
 
 ## Remember
 

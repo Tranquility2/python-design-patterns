@@ -1,8 +1,10 @@
-# **Builder design pattern**
+# **Builder Design Pattern**
 
 Providing a step-by-step approach to build complex objects effortlessly
 
-> In essence, the builder design pattern simplifies and organizes the creation of complex objects, offering a step-by-step approach with flexibility and clarity. It's like having a skilled architect guide you through building your perfect object, brick by brick.
+> In essence, the builder Design Pattern simplifies and organizes the creation of complex objects, offering a step-by-step approach with flexibility and clarity. It's like having a skilled architect guide you through building your perfect object, brick by brick.
+
+---
 
 ## Review
 
@@ -10,6 +12,8 @@ Providing a step-by-step approach to build complex objects effortlessly
 2. Client interaction: You call the builder methods in sequence, specifying the desired features and configurations.
 3. Step-by-step construction: The builder internally manages the assembly process, ensuring proper order and compatibility.
 4. Product creation: At the end, the builder returns the completed product, ready for use.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ Providing a step-by-step approach to build complex objects effortlessly
   Ensures the final product is immutable, reducing side effects and potential errors.
 * **Chainable calls**
   Builder methods can be chained for a smooth and intuitive construction process.
+
+---
 
 ## Example
 
@@ -64,6 +70,8 @@ product.list_parts()  # Output:
 # Part A
 # Part C
 ```
+
+---
 
 ## Remember
 

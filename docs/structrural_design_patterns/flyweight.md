@@ -1,14 +1,18 @@
-# **Flyweight design pattern**
+# **Flyweight Design Pattern**
 
 Sharing for Lightweight Efficiency
 
-> In essence, the flyweight design pattern promotes memory efficiency and performance optimization by sharing identical components, making it a valuable tool for building robust and resource-conscious applications.
+> In essence, the flyweight Design Pattern promotes memory efficiency and performance optimization by sharing identical components, making it a valuable tool for building robust and resource-conscious applications.
+
+---
 
 ## Review
 
 1. Flyweight factory: Creates and manages a pool of flyweight objects with different intrinsic states (e.g., different letters).
 2. Client interaction: Requests specific flyweight objects based on their intrinsic state.
 3. Extrinsic state: The client adds its own extrinsic state (e.g., position) to the flyweight object for individual use.
+
+---
 
 ## Benefits
 
@@ -20,6 +24,8 @@ Sharing for Lightweight Efficiency
   Less code duplication for managing similar objects.
 * **Efficient resource management**
   Sharing resources like fonts, icons, and database connections.
+
+---
 
 ## Example
 
@@ -54,6 +60,8 @@ print(font1.get_font_data())  # Loads font data only once
 print(font2.get_font_data())  # Uses cached font data
 print(font3.get_font_data())  # Loads different font data
 ```
+
+---
 
 ## Remember
 

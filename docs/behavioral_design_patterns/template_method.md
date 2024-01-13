@@ -1,8 +1,10 @@
-# **Template Method design pattern**
+# **Template Method Design Pattern**
 
 Baking a Code Recipe with Flexibility
 
-> In essence, the Template Method design pattern lets you bake a flexible code recipe, providing a solid foundation while allowing for creative variations and customizations to suit your specific needs.
+> In essence, the Template Method Design Pattern lets you bake a flexible code recipe, providing a solid foundation while allowing for creative variations and customizations to suit your specific needs.
+
+---
 
 ## Workflow
 
@@ -10,6 +12,8 @@ Baking a Code Recipe with Flexibility
 2. Declare the placeholder methods as abstract. These methods need to be implemented by subclasses to define the specific behavior.
 3. Subclasses inherit the algorithm and implement the placeholder methods. Each subclass customizes the steps with its own logic, adding unique features or variations.
 4. Clients call the main method of the superclass. This triggers the execution of the entire algorithm using the implemented placeholder steps from the chosen subclass.
+
+---
 
 ## Benefits
 
@@ -21,6 +25,8 @@ Baking a Code Recipe with Flexibility
   Clearly separates the core algorithm from variations and promotes modularity.
 * **Improved maintainability**
   Changes in the core algorithm affect all subclasses, simplifying updates.
+
+---
 
 ## Example
 
@@ -75,6 +81,8 @@ implementation2 = ConcreteImplementation2()
 implementation2.execute()
 
 ```
+
+---
 
 ## Remember
 

@@ -1,8 +1,10 @@
-# **Iterator design pattern**
+# **Iterator Design Pattern**
 
 Simplifying the Journey, One Step at a Time
 
-> In essence, the Iterator design pattern transforms your exploration of data structures into a guided journey, revealing one element at a time, empowering you to navigate efficiently and focus on what matters most.
+> In essence, the Iterator Design Pattern transforms your exploration of data structures into a guided journey, revealing one element at a time, empowering you to navigate efficiently and focus on what matters most.
+
+---
 
 ## Worflow
 
@@ -10,6 +12,8 @@ Simplifying the Journey, One Step at a Time
 2. Each collection implements the iterator interface. They create and return an iterator object specific to the collection's internal structure.
 3. Clients use the iterator to access elements. They call `hasNext()` to check if there are more elements and next() to retrieve and process each element one at a time.
 4. The iterator manages the traversal logic. It keeps track of the current position and advances it appropriately for each `next()` call.
+
+---
 
 ## Benefits
 
@@ -20,7 +24,9 @@ Simplifying the Journey, One Step at a Time
 * **Decoupling**
   Changes in the collection's implementation don't affect the iterating client code.
 * **Composable operations**
-  Iterators can be used with other design patterns like chain of responsibility or observer for efficient processing.
+  Iterators can be used with other Design Patterns like chain of responsibility or observer for efficient processing.
+
+---
 
 ## Example
 
@@ -54,6 +60,8 @@ for number in collection:
     print(number)  # Outputs: 1, 2, 3, 4, 5
 
 ```
+
+---
 
 ## Remember
 

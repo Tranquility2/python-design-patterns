@@ -1,8 +1,10 @@
-# **Memento design pattern**
+# **Memento Design Pattern**
 
 A Snapshot of Time, Undoing the Past, Embracing the Future
 
-> In essence, the Memento design pattern empowers your code to travel through time, capturing fleeting moments and revisiting them at will. This opens doors for undo/redo functionality, versioning, and alternative paths, fostering a dynamic and flexible environment within your program.
+> In essence, the Memento Design Pattern empowers your code to travel through time, capturing fleeting moments and revisiting them at will. This opens doors for undo/redo functionality, versioning, and alternative paths, fostering a dynamic and flexible environment within your program.
+
+---
 
 ## Workflow
 
@@ -11,6 +13,8 @@ A Snapshot of Time, Undoing the Past, Embracing the Future
 3. The memento object stores the captured state. It acts like a sealed container, protecting the information from external modifications.
 4. The originator can hold onto multiple mementos. These represent different snapshots of its past states.
 5. The originator can restore its state from a specific memento. This involves retrieving the captured information and applying it to its current state, effectively reverting to the saved snapshot.
+
+---
 
 ## Benefits
 
@@ -22,6 +26,8 @@ A Snapshot of Time, Undoing the Past, Embracing the Future
   Facilitates creating different versions of an object and exploring alternative scenarios based on restored states.
 * **Decoupling**
   The originator and the memento are independent, promoting loose coupling and easier maintenance.
+
+---
 
 ## Example
 
@@ -65,6 +71,8 @@ editor.redo()
 print(editor.text)  # Output: Hello world!
 
 ```
+
+---
 
 ## Remember
 

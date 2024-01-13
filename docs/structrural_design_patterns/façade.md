@@ -1,14 +1,18 @@
-# **Façade design pattern**
+# **Façade Design Pattern**
 
 One-Stop Shop for Complexity
 
-> In a nutshell, the facade design pattern provides a simple and organized way to access complex systems, making them easier to use and maintain for both developers and users.
+> In a nutshell, the facade Design Pattern provides a simple and organized way to access complex systems, making them easier to use and maintain for both developers and users.
+
+---
 
 ## Review
 
 1. Facade class: Acts as the single point of entry, encapsulating the complexity of the system behind it.
 2. Internal system: The maze of interconnected components that actually perform the work.
 3. Client interaction: Clients interact only with the facade, unaware of the internal structure.
+
+---
 
 ## Benefits
 
@@ -20,6 +24,8 @@ One-Stop Shop for Complexity
   Isolates changes in the internal system from the facade.
 * **Increases flexibility**
   Allows easy modification of the internal system without affecting the facade.
+
+---
 
 ## Example
 
@@ -52,6 +58,8 @@ facade.do_something()  # Output:
 # Subsystem2: Get ready!
 # Facade orders subsystems to perform actions:
 ```
+
+---
 
 ## Remember
 

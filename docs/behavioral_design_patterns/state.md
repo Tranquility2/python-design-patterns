@@ -1,8 +1,8 @@
-# **State design pattern**
-
 Adapting with Every Change
 
-> In essence, the State design pattern allows your code to be like a chameleon, seamlessly blending in with the ever-changing conditions, adapting its behavior with each shift in its internal state. This promotes clarity, maintainability, and flexibility, making your program a master of adaptability.
+> In essence, the State Design Pattern allows your code to be like a chameleon, seamlessly blending in with the ever-changing conditions, adapting its behavior with each shift in its internal state. This promotes clarity, maintainability, and flexibility, making your program a master of adaptability.
+
+---
 
 ## Workflow
 
@@ -10,6 +10,8 @@ Adapting with Every Change
 2. Create concrete state classes. Each class implements the interface and defines the specific behavior and data associated with a particular state.
 3. The main program has a "context" object. This object holds the current state and delegates interaction and transition requests to the chosen state.
 4. Events or conditions can trigger state transitions. The context checks these triggers and, if necessary, switches to a new state, replacing the old one.
+
+---
 
 ## Benefits
 
@@ -21,6 +23,8 @@ Adapting with Every Change
   State transitions are managed in one place, promoting consistency.
 * **Flexibility**
   New states can be added easily without modifying existing code.
+
+---
 
 ## Example
 
@@ -67,6 +71,8 @@ context.handle_event("key_pressed", "b")  # Output: Applying formatting: b
 context.handle_event("save_request")  # Output: Formatting not allowed in this state.
 
 ```
+
+---
 
 ## Remember
 

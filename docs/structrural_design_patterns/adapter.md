@@ -1,14 +1,18 @@
-# **Adapter design pattern**
+# **Adapter Design Pattern**
 
 Bridge between incompatible interfaces
 
-> In a nutshell, the adapter design pattern is a powerful tool for building flexible and future-proof software by creating bridges between incompatible interfaces.
+> In a nutshell, the adapter Design Pattern is a powerful tool for building flexible and future-proof software by creating bridges between incompatible interfaces.
+
+---
 
 ## Flow
 
 1. Client wants "A", adaptee provides "B".
 2. Adapter wraps "B" and pretends to be "A".
 3. Client interacts with adapter, unaware of "B".
+
+---
 
 ## Benefits
 
@@ -20,6 +24,8 @@ Bridge between incompatible interfaces
   Adapters promote code reuse by allowing objects to work with different interfaces.
 * **Simplified integration**
   Integrating third-party libraries or legacy systems becomes smoother.
+
+---
 
 ## Example
 
@@ -47,6 +53,8 @@ client = Client()
 adapter = Adapter(Adaptee())
 client.do_something(adapter)  # Client interacts with the adapter seamlessly
 ```
+
+---
 
 ## Remember
 

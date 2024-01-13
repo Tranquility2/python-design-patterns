@@ -1,8 +1,10 @@
-# **Chain of Responsibility design pattern**
+# **Chain of Responsibility Design Pattern**
 
 Passing the Torch for Efficient Handling
 
-> In essence, the Chain of Responsibility design pattern lets you hand off tasks to the most qualified handler, ensuring efficient and focused processing, just like a well-coordinated relay race.
+> In essence, the Chain of Responsibility Design Pattern lets you hand off tasks to the most qualified handler, ensuring efficient and focused processing, just like a well-coordinated relay race.
+
+---
 
 ## Workflow
 
@@ -11,6 +13,8 @@ Passing the Torch for Efficient Handling
 3. If the handler can handle the request, it performs the necessary processing and returns a result.
 4. If the handler cannot handle the request, it passes it to the next handler in the chain.
 5. The process continues until a handler successfully handles the request or the end of the chain is reached.
+
+---
 
 ## Benefits
 
@@ -22,6 +26,8 @@ Passing the Torch for Efficient Handling
   Allows adding or removing handlers dynamically based on the request or context.
 * **Reduced code duplication**
   Avoids redundant logic by delegating handling to specific handlers.
+
+---
 
 ## Example
 
@@ -68,6 +74,8 @@ for request in requests:
     default_handler.handle(request)
 
 ```
+
+---
 
 ## Remember
 
