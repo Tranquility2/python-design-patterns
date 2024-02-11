@@ -46,3 +46,5 @@ sed -i 's/guide\///g' docs/index.html
 sed -i '/🔗/d' docs/index.html
 # prefix css header to index.html
 sed -i "1s/^/${CSS_HEADER}\n/" docs/index.html
+# update images paths releative one level up
+sed -i 's/src="image/src="\.\.\/image/g' docs/index.html

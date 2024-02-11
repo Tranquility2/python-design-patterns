@@ -1,5 +1,7 @@
 # Design Patterns in Python
 
+![](image/enter.png)
+
 [🔗 Checkout the web version 🔗](https://tranquility2.github.io/python-design-patterns/)
 
 ## SOLID Design Principles
