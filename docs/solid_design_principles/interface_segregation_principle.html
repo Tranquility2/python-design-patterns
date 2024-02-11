@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>interface_segregation_principle</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="interface-segregation-principle" class="slide section level1">
+<h1>Interface Segregation Principle</h1>
+<p>Designing for Focused Functionalities</p>
+<blockquote>
+<p>In essence, the Interface Segregation Principle promotes designing focused interfaces that cater to specific needs, resulting in a more user-friendly, flexible, and maintainable system.</p>
+</blockquote>
+</div>
+<div class="slide section level1">
+
+<h2 id="how-isp-works">How ISP works</h2>
+<ol style="list-style-type: decimal">
+<li>Break down a large interface into smaller, cohesive interfaces. Each interface should group related functionalities focusing on a specific task.</li>
+<li>Clients depend on the specific interfaces they need. They use only the functionalities relevant to their current task, ignoring others within the broader interface.</li>
+<li>Implementation classes provide specific functionalities. Concrete classes implement the specific interfaces they offer, avoiding implementing functionalities they don’t support.</li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<h2 id="benefits">Benefits</h2>
+<ul>
+<li><strong>Improved usability</strong> Smaller, focused interfaces are easier to understand and use for specific tasks.</li>
+<li><strong>Reduced coupling</strong> Clients depend on only the functionalities they need, leading to looser coupling and improved maintainability.</li>
+<li><strong>Increased flexibility</strong> New functionalities can be added by creating new interfaces without modifying existing ones.</li>
+<li><strong>Promotes code reuse</strong> Smaller interfaces encourage code reuse for common functionalities across different contexts.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="remember">Remember</h2>
+<ul>
+<li>Use ISP when a large interface has diverse functionalities with different client needs.</li>
+<li>Overuse can lead to a proliferation of small interfaces, creating unnecessary complexity.</li>
+<li>Choose clear and descriptive names for interfaces and their methods.</li>
+</ul>
+</div>
+</body>
+</html>

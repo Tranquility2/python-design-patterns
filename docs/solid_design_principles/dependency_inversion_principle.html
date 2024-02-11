@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>dependency_inversion_principle</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="dependency-inversion-principle" class="slide section level1">
+<h1>Dependency Inversion Principle</h1>
+<p>Turning Your Code Upside Down for Good</p>
+<blockquote>
+<p>In essence, the Dependency Inversion Principle encourages you to build your software on a foundation of abstractions, not concrete implementations, giving you a house that’s not only strong but also adaptable to future changes.</p>
+</blockquote>
+</div>
+<div class="slide section level1">
+
+<h2 id="how-dip-works">How DIP works</h2>
+<ol style="list-style-type: decimal">
+<li>High-level modules depend on abstractions, not concrete implementations. They rely on interfaces or abstract classes that define the required functionalities.</li>
+<li>Low-level modules implement the abstractions. They provide specific implementations that adhere to the defined interfaces and fulfill the required functionalities.</li>
+<li>Clients (high-level modules) interact with the abstractions, not the concretions. They use the interfaces or abstract classes to access the desired functionalities without knowing the specific implementations.</li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<h2 id="benefits">Benefits</h2>
+<ul>
+<li><strong>Loose coupling</strong> Changes in low-level modules (e.g., new materials or construction techniques) don’t affect high-level modules as long as the abstractions remain the same.</li>
+<li><strong>Increased flexibility</strong> You can easily swap different implementations under the same abstraction, adapting the system to new needs without modifying the high-level code.</li>
+<li><strong>Improved testability</strong> Mocking and testing abstractions become easier, as you’re not tied to specific concrete implementations.</li>
+<li><strong>Open-closed principle</strong> You can extend functionality by adding new implementations without modifying existing code.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="remember">Remember</h2>
+<ul>
+<li>Use DIP when your code has complex dependencies or needs to be flexible and adaptable.</li>
+<li>Overuse can lead to unnecessary abstraction and complexity for simple tasks.</li>
+<li>Choose clear and descriptive names for abstractions and implementations.</li>
+</ul>
+</div>
+</body>
+</html>

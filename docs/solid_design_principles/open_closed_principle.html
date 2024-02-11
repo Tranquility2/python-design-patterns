@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>open_closed_principle</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="open-closed-principle" class="slide section level1">
+<h1>Open-Closed Principle</h1>
+<p>Building Software that Adapts without Breaking</p>
+<blockquote>
+<p>In essence, the Open-Closed Principle empowers you to build software that can seamlessly adapt and grow over time, just like a well-designed house that allows you to add new rooms and windows without compromising its sturdiness and comfort.</p>
+</blockquote>
+</div>
+<div class="slide section level1">
+
+<h2 id="how-ocp-works">How OCP works</h2>
+<ol style="list-style-type: decimal">
+<li>Design your code around abstractions, not concretions. Focus on interfaces and abstract classes that define expected behaviors, not specific implementations.</li>
+<li>Clients rely on the abstractions, not the concrete implementations. Code using the abstractions can be extended without knowing the specifics of how functionalities are implemented.</li>
+<li>New functionalities are implemented through extension of existing abstractions. New concrete classes are created that adhere to the existing abstractions, providing additional functionalities without modifying the core code.</li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<h2 id="benefits">Benefits</h2>
+<ul>
+<li><strong>Increased flexibility</strong> Easily add new features and functionalities without touching existing code.</li>
+<li><strong>Improved maintainability</strong> Modifying core functionalities doesn’t affect extended code, making updates easier.</li>
+<li><strong>Enhanced reusability</strong> Abstractions promote code reuse across different functionalities and implementations.</li>
+<li><strong>Resilient to change</strong> New requirements can be accommodated without extensive code refactoring.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="remember">Remember</h2>
+<ul>
+<li>Use OCP when you anticipate future need for additional functionalities within existing code.</li>
+<li>Overuse can lead to unnecessary abstraction and complexity for simple situations.</li>
+<li>Choose clear and descriptive names for abstractions and their functionalities.</li>
+</ul>
+</div>
+</body>
+</html>

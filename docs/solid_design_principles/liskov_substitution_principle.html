@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>liskov_substitution_principle</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="liskov-substitution-principle" class="slide section level1">
+<h1>Liskov Substitution Principle</h1>
+<p>Replacing Parts Without Breaking the Whole</p>
+<blockquote>
+<p>In essence, the Liskov Substitution Principle promotes building a robust software ecosystem where interchangeable parts work seamlessly together, ensuring smooth operation and reliable functionality.</p>
+</blockquote>
+</div>
+<div class="slide section level1">
+
+<h2 id="how-lsp-works">How LSP works</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Subtypes inherit the supertype’s contract.</strong> They inherit the supertype’s methods and properties, ensuring compatibility with existing code.</li>
+<li><strong>Subtypes preconditions must be weaker or equal.</strong> The subtypes’ methods can have weaker preconditions (accepting more input types) than the supertype, but not stricter ones.</li>
+<li><strong>Subtypes postconditions must be stronger or equal.</strong> The subtypes’ methods can have stronger postconditions (guaranteeing more output guarantees) than the supertype, but not weaker ones.</li>
+<li><strong>Subtypes exceptions must be the same or subclasses of the supertype’s exceptions.</strong> The subtypes’ methods can throw only the same exceptions or subclasses of the exceptions thrown by the supertype.</li>
+</ol>
+</div>
+<div class="slide section level1">
+
+<h2 id="benefits">Benefits</h2>
+<ul>
+<li><strong>Improved code reuse</strong> Subtypes can leverage existing supertype code, reducing duplication and effort.</li>
+<li><strong>Enhanced flexibility</strong> You can easily replace objects with different subtypes without rewriting the program.</li>
+<li><strong>Increased reliability</strong> Substitutability guarantees program correctness even with changing types.</li>
+<li><strong>Reduced testing effort</strong> Tests for the supertype can often apply to conforming subtypes.</li>
+</ul>
+</div>
+<div class="slide section level1">
+
+<h2 id="remember">Remember</h2>
+<ul>
+<li>Use LSP when you have inheritance hierarchies and want to ensure type safety and program correctness.</li>
+<li>Overuse can lead to unnecessary complexity and overly restrictive subtype definitions.</li>
+<li>Design clear and concise contracts for both supertype and subtypes for efficient substitutability.</li>
+</ul>
+</div>
+</body>
+</html>
