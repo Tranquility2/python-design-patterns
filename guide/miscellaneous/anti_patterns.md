@@ -165,6 +165,8 @@ def my_function():
 - **Modular design**
   Organize code into modules or packages for logical grouping and improved reusability.
 
+> "It might seem impressive at first, but like a house of cards, one small change can bring the whole thing tumbling down. Refactoring becomes a religious experience."
+
 ---
 
 #### Magic numbers
