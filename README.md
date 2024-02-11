@@ -1,6 +1,8 @@
-Checkout the [Web](https://tranquility2.github.io/python-design-patterns/) version :)
+# Design Patterns in Python
 
-# SOLID Design Principles
+[🔗 Checkout the web version 🔗](https://tranquility2.github.io/python-design-patterns/)
+
+## SOLID Design Principles
 
 - [Single Responsibility Principle](docs/solid_design_principles/single_responsibility_principle.md)
 - [Open Closed Principle](docs/solid_design_principles/open_closed_principle.md)
@@ -8,14 +10,14 @@ Checkout the [Web](https://tranquility2.github.io/python-design-patterns/) versi
 - [Interface Segregation Principle](docs/solid_design_principles/interface_segregation_principle.md)
 - [Dependency Inversion Principle](docs/solid_design_principles/dependency_inversion_principle.md)
 
-# Creational Design Patterns
+## Creational Design Patterns
 
 - [Builder](docs/creational_design_patterns/builder.md)
 - [Factory](docs/creational_design_patterns/factory.md)
 - [Prototype](docs/creational_design_patterns/prototype.md)
 - [Singleton](docs/creational_design_patterns/singleton.md)
 
-# Structrural Design Patterns
+## Structrural Design Patterns
 
 - [Adapter](docs/structrural_design_patterns/adapter.md)
 - [Bridge](docs/structrural_design_patterns/bridge.md)
@@ -25,7 +27,7 @@ Checkout the [Web](https://tranquility2.github.io/python-design-patterns/) versi
 - [Flyweight](docs/structrural_design_patterns/flyweight.md)
 - [Proxy](docs/structrural_design_patterns/proxy.md)
 
-# Behavioral Design Patterns
+## Behavioral Design Patterns
 
 - [Chain of Responsibility](docs/behavioral_design_patterns/chain_of_responsibility.md)
 - [Command](docs/behavioral_design_patterns/command.md)
