@@ -51,6 +51,7 @@ for user in users:
 * Using them for simple iterations without performance concerns adds unneeded complexity.
 
 ##### Example
+
 ```python
 def count_letters(text):
   return sum(1 for char in text if char.isalpha())  # Generator for simple counting
@@ -71,6 +72,7 @@ def count_letters(text):
 * Use namedtuples, return dictionaries, or separate functions for clarity and flexibility.
 
 ##### Example
+
 ```python
 def get_user_info(user_id):
     if user_id in active_users:
@@ -82,6 +84,7 @@ def get_user_info(user_id):
     user = active_users.get(user_id)  # Use .get() for consistent return type
     return user or {}  # Return an empty dictionary if user not found
 ```
+
 ---
 
 #### Not using `get()` for default values in dictionaries
@@ -90,6 +93,7 @@ def get_user_info(user_id):
 * `dict.get(key, default)` provides a clean, one-line solution.
 
 ##### Example
+
 ```python
 data = {"name": "Alice"}
 if "age" in data:
@@ -100,6 +104,7 @@ else:
 data = {"name": "Alice"}
 age = data.get("age", 30)  # Default value with `get()`
 ```
+
 ---
 
 #### Not using `items()` to iterate over dictionaries
@@ -108,6 +113,7 @@ age = data.get("age", 30)  # Default value with `get()`
 * `for key, value in my_dict.items():` simplifies iteration and avoids indexing errors.
 
 ##### Example
+
 ```python
 user = {"name": "Alice", "age": 30}
 for key in user:
@@ -118,6 +124,7 @@ user = {"name": "Alice", "age": 30}
 for key, value in user.items():
   # Process key and value
 ```
+
 ---
 
 #### Pushing debugger in production code
@@ -126,6 +133,7 @@ for key, value in user.items():
 * Use logging or remote debugging tools for production troubleshooting.
 
 ##### Example
+
 ```python
 def my_function():
     critial_data = get_critical_data()
@@ -140,20 +148,22 @@ def my_function():
     location = save_artifact(clean_data)
     logging.info(f"Processed data: {clean_data.id} @ {location}")  # Logging statement
 ```
+
 ---
 
 #### God classes
 
 * Classes containing hundreds of lines and methods become difficult to understand, maintain, and test.
 * This leads to poor maintainability, testing challenges, and potential coupling issues.
-  
+
 ##### Improved Practices
+
 - **Single Responsibility Principle (SRP)**
-Break down the functionalities into smaller, focused classes responsible for specific tasks.
+  Break down the functionalities into smaller, focused classes responsible for specific tasks.
 - **Composition and inheritance**
-Create a hierarchy of classes where smaller classes inherit or compose to achieve desired functionality.
+  Create a hierarchy of classes where smaller classes inherit or compose to achieve desired functionality.
 - **Modular design**
-Organize code into modules or packages for logical grouping and improved reusability.
+  Organize code into modules or packages for logical grouping and improved reusability.
 
 #### Magic numbers
 
@@ -161,6 +171,7 @@ Organize code into modules or packages for logical grouping and improved reusabi
 * Use constants or configuration files to make them easier to change and track.
 
 ##### Example
+
 ```python
 # Use with clear constants:
 def calculate_discount(price, discount_threshold=10):
@@ -178,8 +189,23 @@ def calculate_discount(price):
   else:
     return price
 ```
+
 ---
 
 ### Additional Resources
 
 * [The Little Book of Python Anti-Patterns](https://github.com/quantifiedcode/python-anti-patterns/blob/master/docs/The-Little-Book-Of-Python-Anti-Patterns.pdf)
+
+---
+#### [Bonus] Cargo cult programming (anti-pattern)
+
+* Copying code without understanding its purpose or functionality.
+* Leads to bloated, inefficient, and error-prone code.
+* Always understand and adapt code to your specific needs.
+* Seek to understand the "why" behind the code, not just the "how"
+
+##### Example
+* Blindly copying code from Stack Overflow without understanding its implications.
+* Using complex libraries or frameworks for simple tasks without understanding their internals.
+
+Read more: [Cargo cult programming](https://en.wikipedia.org/wiki/Cargo_cult_programming)
