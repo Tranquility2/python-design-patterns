@@ -196,7 +196,7 @@ def calculate_discount(price):
 
 ---
 
-### Additional Resources
+#### Additional Resources
 
 * [The Little Book of Python Anti-Patterns](https://github.com/quantifiedcode/python-anti-patterns/blob/master/docs/The-Little-Book-Of-Python-Anti-Patterns.pdf)
 
