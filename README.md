@@ -40,3 +40,8 @@
 - [Strategy](docs/behavioral_design_patterns/strategy.md)
 - [Template Method](docs/behavioral_design_patterns/template_method.md)
 - [Visitor](docs/behavioral_design_patterns/visitor.md)
+
+## Miscellaneous
+
+- [Anti-Patterns](docs/miscellaneous/anti_patterns.md)
+- [Different Approach](docs/miscellaneous/a_different_approach.md)
