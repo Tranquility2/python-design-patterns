@@ -165,6 +165,8 @@ def my_function():
 - **Modular design**
   Organize code into modules or packages for logical grouping and improved reusability.
 
+---
+
 #### Magic numbers
 
 * Hardcoded values throughout code make it inflexible and error-prone.
@@ -197,7 +199,10 @@ def calculate_discount(price):
 * [The Little Book of Python Anti-Patterns](https://github.com/quantifiedcode/python-anti-patterns/blob/master/docs/The-Little-Book-Of-Python-Anti-Patterns.pdf)
 
 ---
-#### [Bonus] Cargo cult programming (anti-pattern)
+
+#### Cargo cult programming anti-pattern
+
+> ✨ Bonus for reading all of this! ✨
 
 * Copying code without understanding its purpose or functionality.
 * Leads to bloated, inefficient, and error-prone code.
@@ -205,6 +210,7 @@ def calculate_discount(price):
 * Seek to understand the "why" behind the code, not just the "how"
 
 ##### Example
+
 * Blindly copying code from Stack Overflow without understanding its implications.
 * Using complex libraries or frameworks for simple tasks without understanding their internals.
 
