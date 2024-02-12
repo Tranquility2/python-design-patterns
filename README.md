@@ -46,4 +46,4 @@
 ## Miscellaneous
 
 - [Anti-Patterns](guide/miscellaneous/anti_patterns.md)
-- [Different Approach](guide/miscellaneous/a_different_approach.md)
+- [Different Approach](guide/miscellaneous/different_approach.md)
