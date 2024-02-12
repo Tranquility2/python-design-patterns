@@ -41,6 +41,8 @@ Lets define a group of design patterns used as basic building blocks.
 - Facade
 - Iterator
 
+---
+
 ### Strange and Unusual
 
 Some of the design patterns are weirder than others, but it doesn't mean they are not useful.
@@ -50,6 +52,8 @@ Some of the design patterns are weirder than others, but it doesn't mean they ar
 - Memento
 
 *In a way, you can remember them as having soemthing to do with memory or trying to conserve resources.*
+
+---
 
 ### Based on callbacks
 
@@ -121,14 +125,14 @@ Examples include functions like `map`, `filter`, and `reduce`.
 
 Overall, callbacks offer a powerful tool for dynamically customizing function behavior and event handling in Python **very common in design patterns**.
 
---- 
+---
 
 ### Summary
+
 Lets summarize the different approch to design patterns groups:
 
 | Group               | Focus                             | Examples                      |
 | ------------------- | --------------------------------- | ----------------------------- |
-| Building Blocks     | Basic and very common             | Builder, Adapter, Facade      |
-| Strange and Unusual | Resource manipulation             | Flyweight, Memento            |
-| Based on callbacks  | Advance handeling using functions | Observer, Visitor, Mediator   |
-
+| Building Blocks     | Basic and very common             | Builder, Adapter, Facade    |
+| Strange and Unusual | Resource manipulation            | Flyweight, Memento           |
+| Based on callbacks  | Advance handeling using functions | Observer, Visitor, Mediator |
