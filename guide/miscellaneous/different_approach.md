@@ -1,6 +1,7 @@
 # **Different Approch**
 
 > Big thanks goes to [ChibiDenDen](https://github.com/ChibiDenDen) for suggesting this ❤️
+
 ## Original
 
 Lets first review the clasic approch:
