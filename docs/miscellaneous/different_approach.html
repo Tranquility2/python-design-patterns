@@ -83,12 +83,12 @@
     charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
-<div id="different-approch" class="title-slide slide section level1">
+<div id="different-approch" class="slide section level1">
 <h1><strong>Different Approch</strong></h1>
-
-</div>
-<div id="original" class="slide section level2">
-<h1>Original</h1>
+<blockquote>
+<p>Big thanks goes to <a href="https://github.com/ChibiDenDen">ChibiDenDen</a> for suggesting this ❤️</p>
+</blockquote>
+<h2 id="original">Original</h2>
 <p>Lets first review the clasic approch:</p>
 <p><strong>Creational Patterns:</strong> Deal with object creation in a flexible and efficient way.</p>
 <p><strong>Structural Patterns:</strong> Focus on how objects and classes are composed to form larger structures.</p>
@@ -131,8 +131,9 @@
 </tbody>
 </table>
 </div>
-<div id="alternative" class="slide section level2">
-<h1>Alternative</h1>
+<div class="slide section level1">
+
+<h2 id="alternative">Alternative</h2>
 <p>And now lets review the different approch ✨ lets consider different approch to design patterns, we can categorize them based on the following:</p>
 <h3 id="building-blocks">Building Blocks</h3>
 <p>Lets define a group of design patterns used as basic building blocks.</p>
@@ -146,7 +147,7 @@
 <li>Iterator</li>
 </ul>
 </div>
-<div class="slide section level2">
+<div class="slide section level1">
 
 <h3 id="strange-and-unusual">Strange and Unusual</h3>
 <p>Some of the design patterns are weirder than others, but it doesn’t mean they are not useful.</p>
@@ -157,7 +158,7 @@
 </ul>
 <p><em>In a way, you can remember them as having soemthing to do with memory or trying to conserve resources.</em></p>
 </div>
-<div class="slide section level2">
+<div class="slide section level1">
 
 <h3 id="based-on-callbacks">Based on callbacks</h3>
 <p>Now this is a big one, quite a few design patterns utilize <strong>callbacks</strong>:</p>
@@ -177,7 +178,7 @@
 </ul>
 <p>we can use it to simplify our work and make it easier to understand and maintain.</p>
 </div>
-<div class="slide section level2">
+<div class="slide section level1">
 
 <h4 id="callbacks">Callbacks</h4>
 <ul>
@@ -189,7 +190,7 @@
 <li>Since functions are objects in Python, they can be passed around like any other data type. This makes callbacks possible.</li>
 </ul>
 </div>
-<div class="slide section level2">
+<div class="slide section level1">
 
 <p>Check out the following example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">def</span> greet(name, callback):</span>
@@ -202,7 +203,7 @@
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>greet(<span class="st">&quot;Alice&quot;</span>, say_goodbye)</span></code></pre></div>
 <p>In this example, the greet function takes a name and a callback function as arguments. It prints a greeting and then calls the callback function with the name as an argument. The say_goodbye function is then used as the callback, printing a goodbye message.</p>
 </div>
-<div class="slide section level2">
+<div class="slide section level1">
 
 <h5 id="common-use-cases-for-callbacks-in-python">Common use cases for callbacks in Python</h5>
 <h6 id="event-handling">Event handling</h6>
@@ -213,7 +214,7 @@
 <p>Many higher-order functions in Python take callback functions as arguments, allowing you to customize their behavior. Examples include functions like <code>map</code>, <code>filter</code>, and <code>reduce</code>.</p>
 <p>Overall, callbacks offer a powerful tool for dynamically customizing function behavior and event handling in Python <strong>very common in design patterns</strong>.</p>
 </div>
-<div class="slide section level2">
+<div class="slide section level1">
 
 <h3 id="summary-1">Summary</h3>
 <p>Lets summarize the different approch to design patterns groups:</p>
