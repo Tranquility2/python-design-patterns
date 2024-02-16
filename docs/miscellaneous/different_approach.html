@@ -181,38 +181,87 @@
 <div class="slide section level1">
 
 <h4 id="callbacks">Callbacks</h4>
+<h5 id="what-are-callbacks">What are callbacks ?</h5>
+<p>Callbacks are essentially executable code chunks passed as arguments to other functions. These functions (recipients) can then “call back” or execute the passed code later as needed.</p>
+<p>Benefits of using callbacks:</p>
 <ul>
-<li>In Python, a callback is a function that is passed as an argument to another function.</li>
-<li>Allows the recipient function to “call back” the passed function later on, often when a certain event occurs or a condition is met.</li>
-</ul>
-<p>You can think about it like giving another function instructions to execute later with potentially different data.</p>
-<ul>
-<li>Since functions are objects in Python, they can be passed around like any other data type. This makes callbacks possible.</li>
+<li>Dynamic Behavior Allow flexible customization of function behavior through different callback implementations.</li>
+<li>Asynchronous Handling Enable handling asynchronous operations where results aren’t immediately available (callback is invoked when ready).</li>
+<li>Modular Design Promote code reusability and organization by encapsulating reusable functionality within callbacks.</li>
 </ul>
 </div>
 <div class="slide section level1">
 
-<p>Check out the following example:</p>
+<h6 id="lambdas">Lambdas</h6>
+<p>Create anonymous functions on the fly, suitable for simple, short-lived callbacks within a specific scope.</p>
+<p><strong>Pros</strong> Easy to define anonymous functions on the fly within a specific scope.</p>
+<p><strong>Cons</strong> Limited functionality and readability for complex logic.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">def</span> greet(name, callback):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  <span class="bu">print</span>(<span class="ss">f&quot;Hello, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!&quot;</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  callback(name)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  callback()</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="kw">def</span> say_goodbye(name):</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>  <span class="bu">print</span>(<span class="ss">f&quot;Goodbye, </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!&quot;</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>greet(<span class="st">&quot;Alice&quot;</span>, say_goodbye)</span></code></pre></div>
-<p>In this example, the greet function takes a name and a callback function as arguments. It prints a greeting and then calls the callback function with the name as an argument. The say_goodbye function is then used as the callback, printing a goodbye message.</p>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>greet(<span class="st">&quot;Bob&quot;</span>, <span class="kw">lambda</span>: <span class="bu">print</span>(<span class="st">&quot;Goodbye from lambda&quot;</span>))</span></code></pre></div>
 </div>
 <div class="slide section level1">
 
-<h5 id="common-use-cases-for-callbacks-in-python">Common use cases for callbacks in Python</h5>
-<h6 id="event-handling">Event handling</h6>
-<p>Callbacks are often used in event-driven programming, where functions are registered to be called when specific events occur. This is common in GUI frameworks and network programming.</p>
-<h6 id="asynchronous-programming">Asynchronous programming</h6>
-<p>Callbacks can be used to handle asynchronous operations like network requests or file I/O, where the result isn’t available immediately. The callback function is invoked with the result when it becomes available.</p>
-<h6 id="higher-order-functions">Higher-order functions</h6>
-<p>Many higher-order functions in Python take callback functions as arguments, allowing you to customize their behavior. Examples include functions like <code>map</code>, <code>filter</code>, and <code>reduce</code>.</p>
-<p>Overall, callbacks offer a powerful tool for dynamically customizing function behavior and event handling in Python <strong>very common in design patterns</strong>.</p>
+<h6 id="bound-methods">Bound Methods</h6>
+<p>Pass methods bound to specific objects, allowing the callback to access object attributes and methods when needed.</p>
+<p><strong>Pros</strong> Useful when the callback needs to access an object’s attributes or methods.</p>
+<p><strong>Cons</strong> Binds the method to a specific object instance.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">class</span> Person:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>    <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>  <span class="kw">def</span> greet(<span class="va">self</span>, greeting):</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>greeting<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss">!&quot;</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a>person <span class="op">=</span> Person(<span class="st">&quot;Alice&quot;</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>greet(<span class="st">&quot;Hi&quot;</span>, person.greet)</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<h6 id="classes">Classes</h6>
+<p>Define separate classes for complex callback logic, offering a structured and organized approach for intricate behaviors.</p>
+<p><strong>Pros</strong> Ideal for complex callback logic requiring structure and organization.</p>
+<p><strong>Cons</strong> More verbose and might be overkill for simple tasks.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">class</span> GoodbyeMessage:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>    <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>  <span class="kw">def</span> <span class="fu">__call__</span>(<span class="va">self</span>):</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Goodbye, </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss">!&quot;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>greet(<span class="st">&quot;David&quot;</span>, GoodbyeMessage(<span class="st">&quot;David&quot;</span>))</span></code></pre></div>
+</div>
+<div class="slide section level1">
+
+<h5 id="connecting-callbacks-and-design-patterns">Connecting Callbacks and Design Patterns</h5>
+<p>Design patterns leverage callbacks to achieve specific functionalities, some examples:</p>
+<h6 id="strategy-pattern">Strategy Pattern</h6>
+<p>Encapsulate different algorithms within interchangeable “strategies” (objects with callback methods).</p>
+<blockquote>
+<p>The main function receives a strategy object and calls its callback method to execute the chosen algorithm dynamically.</p>
+</blockquote>
+<h6 id="observer-pattern">Observer Pattern</h6>
+<p>Define a one-to-many relationship where “subjects” notify registered “observers” (objects with callback methods) about changes.</p>
+<blockquote>
+<p>When a subject changes, it calls the update callback method of all registered observers, notifying them about the change.</p>
+</blockquote>
+<h6 id="command-pattern">Command Pattern</h6>
+<p>Encapsulate requests as objects, allowing queuing, logging, and undo/redo capabilities.</p>
+<blockquote>
+<p>The command object’s execute method acts as a callback, encapsulating the actual request execution logic.</p>
+</blockquote>
+</div>
+<div class="slide section level1">
+
+<h5 id="choosing-the-right-approach">Choosing the Right Approach</h5>
+<h6 id="consider-the-complexity-of-the-callback-logic">Consider the complexity of the callback logic</h6>
+<p>Simple tasks might be well-suited for lambdas or bound methods, while complex scenarios benefit from classes.</p>
+<h6 id="evaluate-the-need-for-object-context">Evaluate the need for object context</h6>
+<p>Bound methods are essential when the callback requires access to object-specific data or behavior.</p>
+<h6 id="maintainability-and-clarity">Maintainability and clarity</h6>
+<p>Prioritize the approach that makes your code easy to understand and modify in the long run.</p>
 </div>
 <div class="slide section level1">
 
