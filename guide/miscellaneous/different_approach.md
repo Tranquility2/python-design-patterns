@@ -79,52 +79,126 @@ we can use it to simplify our work and make it easier to understand and maintain
 
 #### Callbacks
 
-- In Python, a callback is a function that is passed as an argument to another function.
-- Allows the recipient function to "call back" the passed function later on, often when a certain event occurs or a condition is met.
+##### What are callbacks ?
 
-You can think about it like giving another function instructions to execute later with potentially different data.
+Callbacks are essentially executable code chunks passed as arguments to other functions.
+These functions (recipients) can then "call back" or execute the passed code later as needed.
 
-- Since functions are objects in Python, they can be passed around like any other data type. This makes callbacks possible.
+Benefits of using callbacks:
+
+- Dynamic Behavior
+  Allow flexible customization of function behavior through different callback implementations.
+- Asynchronous Handling
+  Enable handling asynchronous operations where results aren't immediately available (callback is invoked when ready).
+- Modular Design
+  Promote code reusability and organization by encapsulating reusable functionality within callbacks.
 
 ---
 
-Check out the following example:
+###### Lambdas
+
+Create anonymous functions on the fly, suitable for simple, short-lived callbacks within a specific scope.
+
+**Pros**
+Easy to define anonymous functions on the fly within a specific scope.
+
+**Cons**
+Limited functionality and readability for complex logic.
 
 ```python
 def greet(name, callback):
   print(f"Hello, {name}!")
-  callback(name)
+  callback()
 
-def say_goodbye(name):
-  print(f"Goodbye, {name}!")
-
-greet("Alice", say_goodbye)
+greet("Bob", lambda: print("Goodbye from lambda"))
 ```
-
-In this example, the greet function takes a name and a callback function as arguments.
-It prints a greeting and then calls the callback function with the name as an argument.
-The say_goodbye function is then used as the callback, printing a goodbye message.
 
 ---
 
-##### Common use cases for callbacks in Python
+###### Bound Methods
 
-###### Event handling
+Pass methods bound to specific objects, allowing the callback to access object attributes and methods when needed.
 
-Callbacks are often used in event-driven programming, where functions are registered to be called when specific events occur.
-This is common in GUI frameworks and network programming.
+**Pros**
+Useful when the callback needs to access an object's attributes or methods.
 
-###### Asynchronous programming
+**Cons**
+Binds the method to a specific object instance.
 
-Callbacks can be used to handle asynchronous operations like network requests or file I/O, where the result isn't available immediately.
-The callback function is invoked with the result when it becomes available.
+```python
+class Person:
+  def __init__(self, name):
+    self.name = name
 
-###### Higher-order functions
+  def greet(self, greeting):
+    print(f"{greeting}, {self.name}!")
 
-Many higher-order functions in Python take callback functions as arguments, allowing you to customize their behavior.
-Examples include functions like `map`, `filter`, and `reduce`.
+person = Person("Alice")
+greet("Hi", person.greet)
+```
 
-Overall, callbacks offer a powerful tool for dynamically customizing function behavior and event handling in Python **very common in design patterns**.
+---
+
+###### Classes
+
+Define separate classes for complex callback logic, offering a structured and organized approach for intricate behaviors.
+
+**Pros**
+Ideal for complex callback logic requiring structure and organization.
+
+**Cons**
+More verbose and might be overkill for simple tasks.
+
+```python
+class GoodbyeMessage:
+  def __init__(self, name):
+    self.name = name
+
+  def __call__(self):
+    print(f"Goodbye, {self.name}!")
+
+greet("David", GoodbyeMessage("David"))
+```
+
+---
+
+##### Connecting Callbacks and Design Patterns
+
+Design patterns leverage callbacks to achieve specific functionalities, some examples:
+
+###### Strategy Pattern
+
+Encapsulate different algorithms within interchangeable "strategies" (objects with callback methods).
+
+> The main function receives a strategy object and calls its callback method to execute the chosen algorithm dynamically.
+
+###### Observer Pattern
+
+Define a one-to-many relationship where "subjects" notify registered "observers" (objects with callback methods) about changes.
+
+> When a subject changes, it calls the update callback method of all registered observers, notifying them about the change.
+
+###### Command Pattern
+
+Encapsulate requests as objects, allowing queuing, logging, and undo/redo capabilities.
+
+> The command object's execute method acts as a callback, encapsulating the actual request execution logic.
+
+---
+
+##### Choosing the Right Approach
+
+###### Consider the complexity of the callback logic
+
+Simple tasks might be well-suited for lambdas or bound methods, while complex scenarios benefit from classes.
+
+###### Evaluate the need for object context
+
+Bound methods are essential when the callback requires access to object-specific data or behavior.
+
+###### Maintainability and clarity
+
+Prioritize the approach that makes your code easy to understand and modify in the long run.
 
 ---
 
